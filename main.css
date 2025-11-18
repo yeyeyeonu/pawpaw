@@ -1,0 +1,176 @@
+/* 기본 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* 메인 컨테이너 */
+  .container {
+    width: 100%;
+    max-width: 375px;  /* iPhone 13 mini 기준 */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* ============= HEADER ============= */
+  
+  .header {
+    margin-top: 80px;
+    text-align: left;
+  }
+  
+  .logo {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+  }
+  
+  .nav a {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* ============= 공통 텍스트 스타일 ============= */
+  
+  .title-lg {
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+ /* 가을여행 섹션 전체 */
+
+.falltrip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* 컬럼 사이 간격 */
+    margin-top: 70px;
+   
+  }
+  
+  /* 오른쪽 컬럼만 아래로 내리기 */
+  .falltrip-grid .col:nth-child(2) {
+    margin-top: 60px;   /* 원하는 만큼 내려주면 됨 */
+  }
+  
+  /* 각 컬럼 설정 */
+  .col {
+    display: flex;
+    flex-direction: column;
+    /*align-items: flex-start;  /* 텍스트를 왼쪽 정렬 */
+    text-align: center;
+  }
+  
+  
+  /* 제목 스타일 */
+  .title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  /* 공통 박스 설정 */
+  .img-box {
+    background: #d9d9d9;
+    border-radius: 0px;
+    margin-top:-10px;
+  }
+  
+  /* 큰 박스 (왼쪽) */
+  .big {
+    width: 174px;
+    height: 260px;
+    
+  }
+  
+  /* 작은 박스 (오른쪽) */
+  .small {
+    width: 158px;
+    height: 199px;
+    align-self: end; /* 오른쪽 박스를 아래에 맞춘 것처럼 보이게 */
+    margin-top: -10px; /* Figma에서 좌표 차이를 반영해서 아래로 내려준 부분 */
+  }
+
+
+  
+  /* ============= 우리는 뚜벅인데 ============= */
+  
+  .walk {
+    margin-top: 90px;
+  }
+  
+  .walk-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 42px;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+
+  .img-box.wide {
+    display: block;
+    width: 340px;
+    height: 231px;
+    background: #d9d9d9;
+    border-radius: 0px;
+    margin: 0px auto 0;
+  }
+  
+
+  /* ============= 주변으로 / 순천향대 ============= */
+.box-wrapper {
+  position: relative;
+  width: 231px;
+  height: 231px;
+  margin: 0 auto; 
+  /* ★추가: 왼쪽으로 튀어 나간 글자('순천향대')가 화면에서 잘리지 않도록 여백 확보 */
+  margin-left: 80px; 
+}
+
+.img-box.mid {
+
+  display: block;
+  width: 231px;
+  height: 231px;
+  background: #d9d9d9;
+  position: relative;
+  margin: 100px 0 0 auto;
+
+}
+
+/* 1. '주변으로' (우측 상단) */
+.top {
+  position: absolute;  
+  margin-top: -130px;
+  top: 100px;      /* 박스 위쪽 바깥으로 더 올림 */
+  left: 20px;        /* 오른쪽 라인에 맞춤 */
+  font-size: 42px; /* 제목급이라 조금 키움 */
+  z-index: 2;           
+  white-space: nowrap;
+}
+
+/* 2. '순천향대' (좌측 중앙) */
+/* 기존 .bottom 대신 .side 같은 클래스명을 추천하지만, 일단 bottom 자리에 적용합니다 */
+.bottom { 
+  position: absolute;
+  top: 40%;        /* 위에서 40% 지점으로 내림 */
+  left: -60px;     /* 박스 왼쪽 바깥으로 뺌 (마이너스 값) */
+  bottom: auto;    /* 기존 bottom 속성 초기화 */
+  font-size: 42px; /* 강조를 위해 폰트 크게 */
+  z-index: 2;           
+  white-space: nowrap;
+}
