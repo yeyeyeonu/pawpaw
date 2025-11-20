@@ -31,13 +31,14 @@
     margin-bottom: 80px;
   }
   
-/* 이미지 박스 */
-.cafe-img {
+  .cafe-img {
     width: 90%;
     height: 220px;
     background: #d9d9d9;
-    margin-bottom: 14px;
+    margin: 0 auto 14px;  
+    border-radius: 0;
   }
+  
   
   /* 전체 텍스트 박스 */
   .cafe-info {
