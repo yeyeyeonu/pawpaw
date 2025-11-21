@@ -1,218 +1,146 @@
-/* 기본 리셋 */
+/* 기본 스타일 리셋 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: #ffffff;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  /* 메인 컨테이너 */
-  .container {
-    width: 100%;
-    max-width: 375px;  /* iPhone 13 mini 기준 */
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-  }
-  
-  /* ============= HEADER ============= */
-  
-  .header {
-    margin-top: 80px;
-    text-align: left;
-  }
-  
-  .logo {
-    font-size: 48px;
-    font-weight: 700;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    margin-top: 20px;
-  }
-  
-  .nav a {
-    font-size: 15px;
-    color: #000;
-    text-decoration: none;
-  }
-  
-  /* ============= 공통 텍스트 스타일 ============= */
-  
-  .title-lg {
-    font-size: 42px;
-    font-weight: 600;
-    text-align: center;
-  }
-  
- /* 가을여행 섹션 전체 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.falltrip-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px; /* 컬럼 사이 간격 */
-    margin-top: 70px;
-   
-  }
-  
-  /* 오른쪽 컬럼만 아래로 내리기 */
-  .falltrip-grid .col:nth-child(2) {
-    margin-top: 60px;   /* 원하는 만큼 내려주면 됨 */
-  }
-  
-  /* 각 컬럼 설정 */
-  .col {
-    display: flex;
-    flex-direction: column;
-    /*align-items: flex-start;  /* 텍스트를 왼쪽 정렬 */
-    text-align: center;
-  }
-  
-  
-  /* 섹션 전체 여백 */
-.falltrip {
+body {
+  font-family: 'Inter', sans-serif;
+  background: #FCFAF3;
+  display: flex;
+  justify-content: center;
+}
+
+/* 전체 화면 컨테이너 */
+.main-wrapper {
+  width: 100%;
+  max-width: 375px; /* iPhone 기준 */
+  padding-bottom: 100px;
+}
+
+/* --------------------------
+   HEADER
+--------------------------- */
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  position: relative;
+}
+
+.line {
+  width: 100%;
+  border-top: 3px solid #000;
+  margin: 20px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 20px;
+}
+
+.nav a {
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* 카테고리 탭 (선 아래로 분리 후 링크 스타일 적용) */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 80px;           /* 카페 / 맛집 간격 */
+  margin-top: 15px;    /* 선 아래 공간 */
+  margin-bottom: 20px; /* 아래 섹션과 간격 */
+}
+
+/* 카테고리 탭 링크 공통 스타일 */
+.category-tabs a {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+}
+
+/* 클릭 가능하다는 느낌 (optional) */
+.category-tabs a:hover {
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+
+.logo {
+  font-family: 'IBM Plex Mono';
+  font-size: 48px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+
+/* --------------------------
+   SECTION 1
+--------------------------- */
+
+.section-one {
+  display: flex;
+  align-items: center;
   margin-top: 40px;
 }
 
-/* 두 컬럼 그리드 */
-.falltrip-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 두 칸 50:50 */
-  gap: 20px; /* 여백 */
-  align-items: start; /* 위로 정렬 */
+.dog-img {
+  width: 45%;
+  height: auto;
 }
 
-/* 각 컬럼 */
-.col {
-  display: flex;
-  flex-direction: column;
-}
-
-/* 제목 스타일 */
-.title {
-  font-size: 34px;      /* 모바일에서도 안 깨지게 조금 줄였음 */
+.section-text {
+  flex: 1;
+  text-align: left;
   font-weight: 700;
-  margin-bottom: 12px;
-  line-height: 1.2;     /* 줄 height 안정화 */
+  font-size: 30px;
+  line-height: 34px;
+  padding-right: 10px;
 }
 
-/* 공통 이미지 박스 */
-.img-box {
-  width: 100%;          /* 가로 꽉 채우기 */
-  background: #d9d9d9;
-  border-radius: 0;
-  overflow: hidden; 
-}
+/* --------------------------
+   SECTION 2
+--------------------------- */
 
-/* 큰 박스 */
-.big {
-  height: 260px;
-}
-
-/* 작은 박스 */
-.small {
-  height: 199px;
-}
-
-.big-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-}
-
-.small-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center -10px; /* 필요에 따라 조절 */
-}
-
-  
-  /* ============= 우리는 뚜벅인데 ============= */
-  
-  .walk {
-    margin-top: 90px;
-  }
-  
-  .walk-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 33px;
-    font-weight: 700;
-    justify-content: center;
-  }
-
-  .img-box.wide {
-    display: block;
-    width: 340px;
-    height: 231px;
-    background: #d9d9d9;
-    border-radius: 0px;
-    margin: 0px auto 0;
-  }
-
-  .wide-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center -60px;
-  }
-
-  /* ============= 주변으로 / 순천향대 ============= */
-.box-wrapper {
+/* SECTION 2 */
+.section-two {
   position: relative;
-  width: 231px;
-  height: 231px;
-  margin: 0 auto; 
-  /* ★추가: 왼쪽으로 튀어 나간 글자('순천향대')가 화면에서 잘리지 않도록 여백 확보 */
-  margin-left: 80px; 
+  width: 100%;
+  height: 700px; /* 원하는 높이로 조정 */
+  margin-top: 50px;
+  overflow: hidden; /* 이미지 삐져나오는 거 숨기기 */
 }
 
-.img-box.mid {
-  display: block;
-  width: 231px;
-  height: 231px;
-  background: #d9d9d9;
+/* 텍스트 */
+.section-title {
   position: relative;
-  margin: 100px 0 0 auto;
-
+  z-index: 2;      /* 텍스트를 최상위로 */
+  font-size: 48px;
+  font-family: 'IBM Plex Mono';
+  font-weight: 700;
+  color: #e54611;
+  text-align: left;
+  padding-top: 40px;
+  line-height: 60px;
 }
 
-
-/* 1. '주변으로' (우측 상단) */
-.top {
-  position: absolute;  
-  margin-top: -120px;
-  top: 100px;      /* 박스 위쪽 바깥으로 더 올림 */
-  left: 50px;        /* 오른쪽 라인에 맞춤 */
-  font-size: 34px; /* 제목급이라 조금 키움 */
-  z-index: 2;           
-  white-space: nowrap;
-}
-
-/* 2. '순천향대' (좌측 중앙) */
-.bottom { 
+/* 배경처럼 깔리는 사람+강아지 이미지 */
+.walk-img {
   position: absolute;
-  top: 40%;        /* 위에서 40% 지점으로 내림 */
-  left: -60px;     /* 박스 왼쪽 바깥으로 뺌 (마이너스 값) */
-  bottom: auto;    /* 기존 bottom 속성 초기화 */
-  font-size: 34px; /* 강조를 위해 폰트 크게 */
-  z-index: 2;           
-  white-space: nowrap;
+  width: 100%;   /* 화면보다 조금 크게 - 자연스러운 연출 */
+  left: 50%;
+  top: 120px;    /* 텍스트 아래로 자연스럽게 이동 */
+  transform: translateX(-50%);
+  z-index: 1;   /* 텍스트 뒤로 보내기 */
+  object-fit: cover;
 }
 
-.mid-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 0px;
-}

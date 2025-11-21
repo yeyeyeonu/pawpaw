@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Mannyunseol'; /* ⭐️ CSS에서 사용할 폰트 이름 정의 ⭐️ */
+    src: url('/만년설체.ttf') format('truetype'); /* ⭐️ 파일 경로와 포맷 지정 ⭐️ */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본 스타일 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Mannyunseol', 'Inter', sans-serif; 
+
+    background: #FCFAF3;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* 전체 화면 컨테이너 */
+  .main-wrapper {
+    width: 100%;
+    max-width: 375px; /* iPhone 기준 */
+    padding-bottom: 100px;
+  }
+
+/* main2: 스크롤 영역 및 배경 */
+.main2 {
+    position: relative; /* 모든 absolute 자식의 기준 */
+    width: 375px; /* 모바일 폭 */
+    height: 1700px; /* 충분한 스크롤 높이 */
+    margin: 0 auto; /* 중앙 정렬 */
+    top: -50px; 
+    overflow-y: scroll; 
+    background: #FCFAF3; /* 이미지 배경색과 유사하게 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 영역 구분을 위한 그림자 */
+}
+
+
+/* ---------------------------------- */
+/* 텍스트 스타일 */
+/* ---------------------------------- */
+
+/* 순천향대 주변으로 (제목) */
+.title-text {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000000;
+    /* 원본 이미지의 기울임을 재현 */
+    transform: rotate(-4deg); 
+    line-height: 1.2;
+    z-index: 10;
+}
+
+/* /css/Msch.css 파일에 아래 내용을 추가/수정합니다. */
+
+/* 기존에 img-1 옆에 있던 캡션 (치즈케이크 설명) */
+.caption-aroute { 
+    position: absolute;
+    width: 140px; 
+    left: 200px; /* img-1 주변 오른쪽 배치 */
+  
+    top:530px;
+    
+    /* 폰트 스타일은 기존 디자인을 따라 손글씨 느낌으로 조정 */
+    font-family: 'Mannyunseol', 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000000;
+    transform: rotate(0deg); /* 이미지와 다르게 똑바로 배치됨 */
+    z-index: 10;
+}
+
+/* ⭐️ 새로 추가된 벚꽃 이미지 아래 캡션 ⭐️ */
+.caption-blossom {
+    position: absolute;
+    /* width: 180px; */
+    left: 20px;
+    top: 860px; /* img-2 아래쪽으로 위치 조정 */
+    
+    font-family: 'Mannyunseol', 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000000;
+    transform: rotate(0deg);
+    z-index: 10;
+}
+
+/* 하단 캡션 */
+.caption-final {
+    position: absolute;
+    width: 280px;
+    left: 20px;
+    top: 1480px; /* 마지막 폴라로이드 아래에 위치 */
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+
+/* ---------------------------------- */
+/* 폴라로이드 이미지 스타일 */
+/* ---------------------------------- */
+
+.post-img {
+    position: absolute;
+    object-fit: contain;
+    /* 모든 이미지가 z-index를 가지도록 설정 */
+    z-index: 5;
+}
+
+/* 1번째 폴라로이드: Aroute 간판 + 클립 */
+.img-1 {
+    width: 250px;
+    left: 100px;
+    top: 220px;
+   
+    z-index: 7; /* 클립이 가장 위에 오도록 */
+}
+
+/* 2번째 폴라로이드: 치즈케이크 + 별표 */
+.img-2 {
+    width: 170px;
+    left: 10px;
+    top: 350px;
+    z-index: 8; 
+}
+
+/* 3번째 폴라로이드: 벚꽃 이미지 */
+.img-3 {
+    width: 180px;
+    left: 20px;
+    top: 550px;
+    z-index: 5; 
+}
+
+/* 4번째 폴라로이드: 강아지 이미지 */
+.img-4 {
+    width: 150px;
+    left: 180px;
+    top: 650px;
+    z-index: 6; 
+}
+
+/* 5번째 폴라로이드: 피자 이미지 + 클립 */
+.img-5 {
+    width: 320px;
+    left: 10px;
+    top: 880px;
+    z-index: 7; /* 클립이 가장 위에 오도록 */
+}
+
+/* 6번째 폴라로이드: 가게 외부 사진 */
+.img-6 {
+    width: 300px;
+    left: 30px;
+    top: 1200px;
+    z-index: 8; 
+}

@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #ffffff;
+  background: #FCFAF3;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -15,7 +15,7 @@ body {
   max-width: 375px;
   margin: 80px auto 0;   /* 🔥 여기! margin-top 80px */
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #FCFAF3;
 }
 
 
@@ -44,12 +44,20 @@ body {
   margin-bottom: 12px;
 }
 
-/* 공통 이미지 박스 */
 .img-box {
-  width: 100%;          /* 가로 꽉 채우기 */
-  background: #d9d9d9;
-  border-radius: 0;
+  display: block;
+  width: 237px;
+  height: 301px;
+  overflow: hidden;
+  border-radius: 10px; /* 필요하면 */
 }
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 이미지 꽉 채우기 */
+}
+
 
 /* PICK 01*/
 .pick1-wrap {
@@ -61,7 +69,7 @@ body {
 .pick-title-box {
   position: absolute;
   top: 20px;     /* 박스 왼쪽 위로 올림 */
-  left: 49px;
+  left: 40px;
   font-size: 34px;
   font-weight: 600;
   line-height: 1.1;
@@ -72,7 +80,7 @@ body {
 .num01 {
   position: absolute;
   top: 200px;     /* 제목 아래로 */
-  left: 77px;
+  left: 57px;
   font-size: 48px;
   font-weight: 600;
   z-index: 3;
