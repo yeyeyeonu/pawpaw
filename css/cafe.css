@@ -68,8 +68,8 @@ body {
 /* PICK 제목 2줄 */
 .pick-title-box {
   position: absolute;
-  top: 20px;     /* 박스 왼쪽 위로 올림 */
-  left: 40px;
+  top: -30px;     /* 박스 왼쪽 위로 올림 */
+  left: 30px;
   font-size: 34px;
   font-weight: 600;
   line-height: 1.1;
@@ -115,49 +115,14 @@ body {
   display: block;
   width: 230px;
   height: 260px;
-  margin: 100px 0 0 auto;  /* 🔥 제목+번호를 피해서 아래 배치 */
+  margin: 100px 0 0 auto;
   background: #d9d9d9;
 }
 
-.pick2 .pick-info {  
-  position: absolute;   
-  top: 220px; 
-  left: 60px;
-  z-index: 3; }
-
-
-
-
-  /* PICK03 맞춤 */
-  
-  .pick3 {
-    position: relative; /* 자식 absolute를 위한 기준점 */
-    padding-top: 80px;  /* 👉 여기로 공간 확보! */
-  }
-
-  .num03 {
-    margin:-30px 0 0 0;
-    position: absolute;    
-    right:0px;
-    font-size: 48px;
-    font-weight: 600;
-  }
-  
-  .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
-    width: 340px;
-    margin: 20px auto;
-  }
-  
-  .grid-box {
-    width: 100%;
-    height: 140px;
-    background: #d9d9d9;
-    border-radius: 0px;
-  }
-  /* 상호명/위치 */
-.pick3 .pick-info {
- text-align: right;
+/* 상호명/위치 (텍스트 정렬) */
+.pick2 .pick-info {
+  text-align: left; 
+  margin-top: -10px;
+  /* 👇 이 코드를 추가하여 오른쪽 끝에서 10px 만큼 여백을 만듭니다. */
+  padding-left: 50px; /* 원하는 만큼 픽셀(px) 값을 조절하세요. */
 }
